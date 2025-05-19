@@ -3,12 +3,14 @@ This is JavaScript project of regular expressions for extracting various types o
 
 This project provides a set of functions that use regular expressions to extract and validate different types of data from text. It's designed to handle various data formats and common edge cases.
 
+
 ## Extracted Data Types
 - Email addresses
 - URLs
 - Phone Numbers
 - Credit Card Numbers
 - Time formats (12h/24h)
+- HTML tags
 - Hashtags
 - Currency amounts
 
@@ -16,46 +18,47 @@ This project provides a set of functions that use regular expressions to extract
 
 Clone the repository
 ```bash
-  git clone https://github.com/IH-honnette/alu_regex-data-extraction-IH-honette.git
-  cd  alu_regex-data-extraction-IH-honette
+git clone https://github.com/IH-honette/alu_regex-data-extraction-IH-honette.git
+cd alu_regex-data-extraction-IH-honette
 ```
-Project structure 
 
+Project structure 
 ```bash 
 alu_regex-data-extraction-IH-honette/
 ├── README.md
 ├── main.js                  # Main regex functions
-├── test_regex.js            # Basic test suite
+├── test_regex.js            # Test suite with performance tests
 └── demo.js                  # Demo application
 ```
-Install Node.js (if not already installed)
 
+Install Node.js (if not already installed)
 Download and install from Node.js website
 
-Run the tests
-node test_regex.js
+## Usage
 
+### Basic Usage
+```javascript
+import { extractAllData } from './main.js';
 
-## Files Description
-
-main.js: Contains all the regex extraction functions
-test_regex.js: Contains test cases to demonstrate the functionality of each regex pattern
-
-
-## Sample Usage
-
-``` bash 
-
-javascriptconst { extractAllData } = require('./regex_extractor');
 const text = `
 Contact me at user@example.com or call (123) 456-7890.
 Check out our website at https://www.example.com.
 The product costs $19.99.
 `;
+
 const extractedData = extractAllData(text);
 console.log(extractedData);
-
 ```
 
-### Author
+### Running Tests
+```bash
+node test_regex.js
+```
+
+### Running Demo
+```bash
+node demo.js
+```
+
+## Author
 Marie Honette
